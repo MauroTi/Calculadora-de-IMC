@@ -6,30 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etaltura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#5384D610"
         android:ems="10"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:focusedByDefault="true"
+        android:inputType="textPersonName|numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/etpeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5384D610"
+        android:ems="10"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:focusedByDefault="false"
         android:inputType="textPersonName|numberDecimal"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#5384D610"
-        android:ems="10"
-        android:inputType="textPersonName|numberDecimal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/textView3"
@@ -38,12 +46,12 @@
         android:text="O seu IMC é"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#008080"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/etimc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etimc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -51,7 +59,7 @@
         android:ems="10"
         android:inputType="textPersonName|numberDecimal"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btncalcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -62,7 +70,7 @@
         android:text="Digite seu peso"
         android:textColor="#008080"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/etpeso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
@@ -74,7 +82,7 @@
         android:text="Digite sua altura"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#008080"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/etaltura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,15 +90,27 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btncalcular"
+        android:layout_width="119dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="228dp"
+        android:onClick="Calcula"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="312dp"
-        android:text="Button"
-        android:onClick="Calcula"
+        android:layout_marginEnd="36dp"
+        android:text="Consulte Tabela Aqui"
+        android:onClick="consulta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/etimc"
+        app:layout_constraintVertical_bias="0.125" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
