@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 frase = "Você tem obesidade grau 3!";
             }
             Toast.makeText(this, frase, Toast.LENGTH_LONG).show();
-
-
         }
     }
 
